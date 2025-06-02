@@ -21,7 +21,7 @@ export async function extractStatements(transcript: string): Promise<string[]> {
     Format: ["Statement 1", "Statement 2", ...]`;
 
     const response = await openai.chat.completions.create({
-      model: 'gpt-4',
+      model: 'gpt-4-turbo-preview',
       messages: [
         {
           role: 'system',
@@ -85,7 +85,7 @@ export async function verifyStatement(statement: string): Promise<{
     }`;
 
     const response = await openai.chat.completions.create({
-      model: 'gpt-4',
+      model: 'gpt-4-turbo-preview',
       messages: [
         {
           role: 'system',
